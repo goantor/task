@@ -1,4 +1,4 @@
-module leaf/services/task
+module github.com/goantor/task
 
 go 1.19
 
