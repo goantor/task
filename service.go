@@ -15,7 +15,7 @@ const (
 type RegisterHandler func(manager *deamon.DefaultDaemonManager)
 
 type ITask interface {
-	Handler(handler deamon.Handler)
+	Handler() deamon.TaskFunc
 }
 
 type Task struct{}
