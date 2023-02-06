@@ -19,7 +19,7 @@ type ITask interface {
 }
 
 type Task struct {
-	routeHandler RegisterHandler
+	RouteHandler RegisterHandler
 }
 
 //func (t *Task) Register(handler RegisterHandler) {
