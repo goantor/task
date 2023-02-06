@@ -18,16 +18,21 @@ type ITask interface {
 	Handler() deamon.TaskFunc
 }
 
-type Task struct{}
-
-func (t *Task) Register(handler RegisterHandler) {
-	handler(deamon.DaemonManager)
+type Task struct {
+	routeHandler RegisterHandler
 }
 
-func (t *Task) Boot() {
+//func (t *Task) Register(handler RegisterHandler) {
+//	handler(deamon.DaemonManager)
+//}
+
+func (t *Task) Boot() error {
 	c := make(chan os.Signal, 1)
 	signal.Notify(c, os.Interrupt, os.Kill)
+
+	t.routeHandler(deamon.DaemonManager)
 	deamon.DaemonManager.Start()
 
 	<-c
+	return nil
 }
