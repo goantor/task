@@ -1,6 +1,6 @@
 module github.com/goantor/task
 
-go 1.19
+go 1.20
 
 require (
 	github.com/goantor/deamon v0.0.1
