@@ -12,10 +12,9 @@ const (
 	Time
 )
 
-type RegisterHandler func(manager *deamon.DefaultDaemonManager)
+type RegisterHandler func()
 
 type ITask interface {
-	Handler() deamon.TaskFunc
 }
 
 type Task struct {
@@ -30,8 +29,7 @@ func (t *Task) Boot() error {
 	c := make(chan os.Signal, 1)
 	signal.Notify(c, os.Interrupt, os.Kill)
 
-	t.RouteHandler(deamon.DaemonManager)
-	deamon.DaemonManager.Start()
+	go deamon.Start()
 
 	<-c
 	return nil

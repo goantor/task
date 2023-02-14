@@ -3,7 +3,7 @@ module github.com/goantor/task
 go 1.20
 
 require (
-	github.com/goantor/deamon v0.0.4
+	github.com/goantor/deamon v0.0.7
 	github.com/robfig/cron v1.2.0 // indirect
 )
 
@@ -17,7 +17,7 @@ require (
 	github.com/goantor/ex v0.0.2 // indirect
 	github.com/goantor/logs v0.0.4 // indirect
 	github.com/goantor/pr v0.0.1 // indirect
-	github.com/goantor/x v0.0.8 // indirect
+	github.com/goantor/x v0.0.10 // indirect
 	github.com/goccy/go-json v0.10.0 // indirect
 	github.com/google/go-cmp v0.5.9 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
