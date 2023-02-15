@@ -3,7 +3,7 @@ module github.com/goantor/task
 go 1.20
 
 require (
-	github.com/goantor/deamon v0.0.7
+	github.com/goantor/deamon v0.0.8
 	github.com/robfig/cron v1.2.0 // indirect
 )
 
@@ -35,7 +35,7 @@ require (
 	github.com/sirupsen/logrus v1.9.0 // indirect
 	github.com/ugorji/go/codec v1.2.9 // indirect
 	golang.org/x/crypto v0.6.0 // indirect
-	golang.org/x/net v0.6.0 // indirect
+	golang.org/x/net v0.7.0 // indirect
 	golang.org/x/sys v0.5.0 // indirect
 	golang.org/x/text v0.7.0 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
