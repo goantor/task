@@ -1,6 +1,7 @@
 package task
 
 import (
+	"context"
 	"github.com/goantor/deamon"
 )
 
@@ -24,11 +25,10 @@ type Task struct {
 //}
 
 func (t *Task) Boot() error {
-	//c := make(chan os.Signal, 1)
-	//signal.Notify(c, os.Interrupt, os.Kill)
-
 	go deamon.Start()
+	return nil
+}
 
-	//<-c
+func (t *Task) Shutdown(ctx context.Context) error {
 	return nil
 }
